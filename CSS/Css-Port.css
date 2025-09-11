@@ -1,0 +1,91 @@
+/*#7d677e #4f2c4d #360b41 #ccc9aa #fafdea*/
+.goifhauwiawfuhgo {
+    color: #7d677e;
+    color: #4f2c4d;
+    color: #360b41;
+    color: #ccc9aa;
+    color: #fafdea;
+}
+
+body {
+    background-color: #360b41;
+}
+
+header {
+ background-color: #4f2c4d;
+ padding-left: 25%;
+ padding-right: 25%;
+ text-align: center;
+}
+
+a {
+    font-size: 40px;
+    margin: 12px;
+    color: #ccc9aa;
+}
+
+a:hover {
+    font-size: 45px;
+    margin: 12px;
+    color: #7d677e;
+}
+
+h2 {
+    font-size: 45px;
+    margin: 17px;
+    color: #ccc9aa;
+}
+
+.header {
+    font-size: 40px;
+    margin: 12px;
+    color: #ccc9aa;
+    display: inline-block;     
+}
+
+p {
+    font-size: 40px;
+    margin: 12px;
+    color: #ccc9aa;   
+}
+
+li {
+    font-size: 40px;
+    margin: 12px;
+    color: #ccc9aa;  
+}
+
+.contatos {
+    padding: 17px;
+}
+
+.Thtml, .Tcss {
+    border: 2px solid #ccc9aa;
+    border-radius: 15px;
+    margin: 25px;
+    padding-top: 10px;   /* Reduced from 25px */
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    background-color: #4f2c4d;
+}
+
+.Thtml p:first-child,
+.Tcss p:first-child {
+    margin-top: 0;      /* Remove extra margin above the first link */
+}
+
+.div-title {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    top: -32px; /* Adjust as needed */
+    background: #4f2c4d; /* Match the div background */
+    color: #fafdea;
+    font-size: 28px;
+    padding: 0 18px;
+    z-index: 1;
+    border: 2px solid #ccc9aa;
+    border-radius: 5px;
+}
