@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --amarelinho: #EDD188;
+  --backgroundg: #eeeeee;
+  --color_text: #000000;
+  --span_hero: #A2CA71;
+  --social_icon: #fff;
+}
+
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeeee;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color:#121212;
+  color: #E0E0E0;
+  transition: background-color 1s, color 1s;
+}
+
+body.dark-mode a {
+  background-color:#121212;
+  color: #E0E0E0;
+  transition: background-color 1s, color 1s;
+}
+body.dark-mode .compostagem.highlight {
+  background-color:#121212;
+  color: #E0E0E0;
+  transition: background-color 1s, color 1s;
+}
+
+/* ANIMAÇÕES */
+@keyframes entradaHero {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecerTracinho {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 82px;
+    opacity: 1;
+  }
+}
+
+/* ESTILO HERO */
+.hero {
+  background-image: url(../assets/images/Fotos_pra_otimização/Imagem_site.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transition: background-position 0.3s ease;
+}
+
+.hero.parallax {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .hero.parallax {
+    background-attachment: scroll;
+  }
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero_span {
+  color: var(--span_hero);
+}
+
+#sectionn {
+  padding: 0 19%;
+}
+
+.hero-text h2 {
+  font-size: 74px;
+  line-height: 1;
+  margin: 0 0 45px;
+  font-weight: bolder;
+  user-select: none;
+  color: #fff;
+  animation: entradaHero 0.8s 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.hero-text p {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 35px;
+  user-select: none;
+  color: #fff;
+  animation: entradaHero 0.8s 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.tracinho {
+  width: 82px;
+  height: 1.1px;
+  background-color: #DDA77B;
+  padding: 6px;
+  margin: 8px 0;
+  animation: aparecerTracinho 1s 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1460px){
+  #sectionn{
+    padding: 0 12%;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1340px){
+  .hero-text h2{
+    font-size: 96px;
+    margin: 0 0 30px;
+  }
+  .hero-text p{
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0 0 30px;
+  }
+}
+
+@media (max-width: 1195px) {
+  .hero-text h2{
+    font-size: 42px;
+    margin: 0 0 20px;
+  }
+  .hero-text p{
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0 0 30px;
+  }
+  #sectionn {
+    padding: 0 3%;
+    transition: .2s;
+  }
+  .hero-text {
+    padding-top: 115px;
+  }
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GARANTIA DE COMPATIBILIDADE */
+@media (prefers-reduced-motion: reduce) {
+  .hero-text h2,
+  .hero-text p,
+  .tracinho {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+.container {
+  padding: 20px;
+}
+
+.content {
+  padding-right: 20px; 
+}
+
+.oquee h2 {
+  margin-top: 20px;
+}
+
+.textp {
+  list-style-type: disc;
+}
+
+.spane {
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@media (max-width: 992px) {
+  .container {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+  }
+}
+
+
+.oquee h2{
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.oquee p{
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.textp li{
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.textp {
+  list-style:inside;
+}
+
+.res_comp {
+  text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  
+  .oquee p{
+    text-align: justify;
+  }
+  
+  .textp li{
+    text-align: justify;
+    margin-left: 0;
+  }
+  
+  .textp {
+    margin-left: 0;
+  }
+  
+  .textp {
+    list-style:inside;
+  }
+}
+
+/* Conteiner Noticias */
+.not {
+  padding: 20px;
+  border-left: 1px solid #ccc; 
+}
+
+.noti {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container_dropdown{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #EDD188;
+  color: black;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn i {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .dropdown-btn {
+      padding: 15px;
+      font-size: 18px;
+      text-align: center;
+  }
+
+  .dropdown {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+  }
+
+  .dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      box-shadow: none;
+      display: none;
+  }
+
+  .dropdown-content a {
+      padding: 12px 15px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+  }
+}
+
+/* Cards */
+.cards_item {
+  display: flex; 
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer; 
+  padding-left: 20px;
+  align-items: center;
+  transition: 
+  transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 0.3s ease-out;
+}
+
+.cards_item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+
+.card_title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.card_image {
+  max-width: 450px; 
+  margin-left: 50px; 
+}
+
+.cards_item {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.card_text {
+  font-size: 19px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Responsividade */
+@media (max-width: 1199px) {
+  .card_text {
+      display: none;
+  }
+  .card_title {
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards_item {
+      flex-direction: column; 
+      align-items: flex-start; 
+  }
+  .card_title {
+    font-weight: bold;
+  }
+  .card_image {
+      max-width: 100%; 
+      margin-left: 0; 
+      margin-top: 10px; 
+  }
+  .card_content {
+      width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .card_image {
+      max-width: 100%;
+  }
+}
+
+/* card das composteira */
+.compostagem-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.compostagem {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s ease-in-out;
+  flex-direction: row; 
+  align-items: center; 
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease-out,
+    background-color 0.5s ease
+    ;
+}
+
+.compostagem.highlight {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border: 1px solid #818181;
+  background-color: white;
+}
+
+.compostagem img {
+  width: 250px;
+  user-select: none;
+  margin-right: 20px; 
+}
+
+.compostagem-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; 
+}
+
+.compostagem-title {
+  text-align: center; 
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  width: 80%; 
+  transition: transform 0.3s ease;
+}
+
+.compostagem-title i {
+  font-size: 18px;
+  margin: auto;
+  padding-left: 5px;
+  font-weight: 200;
+}
+
+.compostagem-content {
+  display: none;
+  font-size: 18px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.compostagem:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01); 
+}
+
+.compostagem.expanded .compostagem-title {
+  transform: translateY(-20px);
+  animation: titleBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+}
+
+.compostagem.expanded .compostagem-content {
+  display: block;
+  animation: 
+    contentReveal 0.5s 0.2s ease-out both,
+    fadeIn 0.4s 0.1s ease-out;
+}
+
+/* Animação melhorada */
+@keyframes titleBounce {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  60% {
+    transform: translateY(-25px) scale(1.05);
+  }
+  100% {
+    transform: translateY(-20px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes contentReveal {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .compostagem {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .compostagem img {
+    width: 80%; 
+    margin-bottom: 20px; 
+  }
+  .compostagem-texts {
+    align-items: center; 
+    width: 100%;
+  }
+  .compostagem-title {
+    font-size: 18px; 
+    text-align: center; 
+  }
+  .compostagem-content {
+    font-size: 15px;
+  }
+  .compostagem.expanded .compostagem-title {
+    transform: translateY(0px); 
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+/* /------------------------------/ */
+
+/* .loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading .spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--span_hero);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} */
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação de deslizamento e fade-in para os títulos */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animação para as listas */
+@keyframes slideInList {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe para ativar as animações */
+.animate {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 1;
+}
+
+/* Aplica animação nas listas */
+.textp li.animate {
+  animation: slideInList 1s ease-out forwards;
+  opacity: 1;
+  animation-delay: 1s;
+}
+
+/* Aplica animação nas spans dentro das listas */
+.spane {
+  font-weight: bold;
+  font-style: italic;
+  color: #DDA77B;
+  animation: slideIn 1.5s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+
+/* Efeito de linha (tracinho) */
+.tracinho.animate {
+  width: 82px;
+  height: 1.1px;
+  background-color: #DDA77B;
+  padding: 6px;
+  margin: 8px 0;
+  opacity: 1;
+  animation: slideIn 1s ease-out forwards;
+  animation-delay: 2s;
+}
+
+
+.conteudos {
+  position: relative;
+  background: #f8faf7;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+
+.conteudos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+      url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20 50Q40 15 60 50Q80 85 90 50L50 90L10 50Z" fill="%23A2CA7120" /><path d="M85 25Q70 10 55 25Q40 40 25 25L55 55L85 25Z" fill="%23A2CA7115" /></svg>');
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+  animation: folhasFlutuantes 40s linear infinite;
+}
+
+@keyframes folhasFlutuantes {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+body.dark-mode .conteudos {
+  background: #1a1a1a;
+}
+
+body.dark-mode .conteudos::before {
+  background: 
+      url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20 50Q40 15 60 50Q80 85 90 50L50 90L10 50Z" fill="%234CAF5020" /><path d="M85 25Q70 10 55 25Q40 40 25 25L55 55L85 25Z" fill="%234CAF5015" /></svg>');
+}
+
+.container {
+  position: relative;
+}

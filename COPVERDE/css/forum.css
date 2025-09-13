@@ -1,0 +1,510 @@
+body.dark-mode {
+    background-color:#121212;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+ body.dark-mode a {
+    background-color:#121212;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .container {
+    background-color: #121212;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .modal-contento {
+    background-color: #121212;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .modal input {
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode select{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .new-topic{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .tags_o{
+    background-color:rgba(59, 104, 59, 0.527);
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .discursao-container{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .discursao-container h3{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .comment-section{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .comment{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .comment-input{
+    background-color: #525151;
+    color: #E0E0E0;
+    transition: background-color 1s, color 1s;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+}
+
+.principal {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* tags */
+.conteiner {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.subconteiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subconteiner span {
+    display: inline-block;
+    padding: 8px 12px;
+    color: white;
+    background-color:rgba(16, 72, 16, 0.355);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.subconteiner span:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .conteiner {
+        padding: 10px;
+    }
+
+    .subconteiner span {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* botão do topico */
+.new-topic {
+    font-size: 17px;
+    padding: 8px 12px;
+    color: rgb(33, 32, 32);
+    background-color: #eeeeee;
+    border:2px solid #555858;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.new-topic:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.info h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .info h2 {
+        font-size: 20px;
+    }
+    .new-topic {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-contento {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
+}
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-bottom: 2px;
+}
+.fechar_modal {
+    color: #aaa;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    left: 10px;
+}
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+.modal select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+}
+.modal label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.modal input, .modal button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.buttonn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.buttonn:hover {
+    background-color: #45a049;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.topicos ul {
+    padding: 0;
+    margin: 0;
+}
+
+#loginMessage {
+    color: rgb(241, 70, 70);
+    margin: auto 0;
+    font-weight: 600;
+}
+
+.discursao-container {
+    margin: 10px 0;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discursao-container::marker {
+    content: "";
+}
+
+.discursao-title { 
+    top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.metadata-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    background-color: #198754;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color:#eeeeee
+}
+
+.user-info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.user-info-container i {
+    font-size: 14px;
+}
+
+.discursao-title-container i {
+    font-size: 17px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.discursao-title-container i:hover {
+    transform: scale(1.1);
+}
+
+.discursao-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-count-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff4757;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.comment-section {
+    margin: 15px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.comment {
+    margin: 10px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+.comment-date {
+    display: block;
+    font-size: 0.75em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.comment-input {
+    width: 100%;
+    margin: 15px 0 10px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+.comment-button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.comment-button:hover {
+    background: #45a049;
+}
+
+.user-info-container div[style*="inline-block"] {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@keyframes scaleAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.login-message-highlight {
+    animation: scaleAnimation 3s;
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .subconteiner {
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    .subconteiner span {
+        font-size: 12px;
+        padding: 6px 10px;
+        flex: 1 1 auto;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .new-topic {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-contento {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .modal input, 
+    .modal select, 
+    .modal button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .discursao-container {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .discursao-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .metadata-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-section {
+        padding: 8px;
+    }
+    
+    .comment-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .principal {
+        padding: 10px;
+    }
+    
+    .user-info-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tags-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .comment-input {
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}

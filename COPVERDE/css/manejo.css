@@ -1,0 +1,417 @@
+body.dark-mode {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode a {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .compostagem {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #compostagemSection {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #tipoCompostagem {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .a {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .material {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #material {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #listaMateriais {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #informacoesCompostagem {
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #informacoesCompostagem li{
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode .descc{
+  background-color:#121212;
+  color: #fff;
+}
+body.dark-mode #listaMateriais li {
+  background-color:#121212;
+}
+body.dark-mode .headera {
+  background-color:rgba(59, 104, 59, 0.527);
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode #formMaterial button {
+  background-color:rgba(59, 104, 59, 0.527);
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
+}
+body.dark-mode .deleteButnto {
+  background-color:#D63031;
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+.headera {
+  display: flex;
+  background-color: #4CAF50; /* Verde */
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+}
+
+.gh1 {
+  margin: 0;
+  flex-grow: 1; /* Faz com que o título ocupe o espaço restante */
+  text-align: center; /* Centraliza o texto */
+  order: 2;
+}
+
+
+/* Estilo das seções */
+section {
+  background-color: #eeeeee;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ .gh2 {
+  margin-top: 0;
+  color: #4CAF50; /* Verde */
+}
+
+/* Estido do grafico */
+.Graph {
+  width: 43%;
+  display: inline-block;
+}
+
+#mensagens {
+  text-align: center;
+}
+
+.gag {
+  left: 20px;
+  top: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  color: #4CAF50;
+  text-decoration: none;
+  border: 1px solid #4CAF50;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
+}
+
+.gag:hover {
+  background-color: #4CAF50;
+  color: white; /* Texto branco ao passar o mouse */
+}
+
+@media (max-width: 600px) {
+  .compostagem-actions{
+    padding: 0;
+    margin: 0;
+  }
+
+  .modal-content {
+      width: 90%;
+  }
+
+  .form h2 {
+      font-size: 20px;
+  }
+
+  .Graph{
+    display: block;
+   
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.material {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Estilo do formulário */
+form#formMaterial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Campo de input */
+form#formMaterial input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+form#formMaterial input[type="text"]:focus {
+  box-shadow: 0 0 5px rgba(58, 60, 61, 0.5);
+}
+
+/* Botão de envio */
+form#formMaterial button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #6cc26c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form#formMaterial button:hover {
+  background-color: #108510d8;
+}
+
+/* Lista de materiais */
+ul#listaMateriais {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#listaMateriais li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#listaMateriais li:last-child {
+  border-bottom: none;
+}
+
+
+
+/* seção escolha */
+#compostagemSection {
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#informacoesCompostagem {
+  background-color: #f9f9f9;
+}
+
+#compostagemSection h2 {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Estilo para o conteúdo*/
+.tituloc {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.titulod {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+
+.descc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-family: Georgia, serif;
+}
+
+.listac {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.listac li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.listac li::marker {
+  color: #2e7d32;
+  font-size: 1.2rem;
+}
+
+#listaMateriais {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#listaMateriais li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.deleteButton {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .headera {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .gh1 {
+    font-size: 1.5rem;
+    order: 0;
+  }
+
+  .tituloc {
+    font-size: 1.5rem;
+  }
+
+  .Graph {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #formMaterial {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #formMaterial input[type="text"] {
+    width: 100%;
+    max-width: none;
+  }
+
+  #formMaterial button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .gh1 {
+    font-size: 1.3rem;
+  }
+
+  .gh2 {
+    font-size: 1.2rem;
+  }
+
+  .tituloc {
+    font-size: 1.2rem;
+  }
+
+  #listaMateriais li {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .deleteButton {
+    width: 100%;
+    padding: 8px;
+  }
+
+  #compostagemSection h2 {
+    font-size: 1.1rem;
+  }
+
+  .material {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  #formMaterial button {
+    font-size: 14px;
+  }
+  
+  .gh1 {
+    font-size: 1.2rem;
+  }
+
+  #listaMateriais li {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

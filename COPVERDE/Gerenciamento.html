@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Css Página -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/manejo.css">
+    <link rel="stylesheet" href="css/navbar_pg.css">
+    <link rel="stylesheet" href="css/ModalPerfil.css">
+    <!-- Remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/Fotos_pra_otimização/Logo.webp">
+    <title>Gerenciamento - Minha Compostagem</title>
+    <!-- Gráfico -->
+    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+</head>
+
+<body>
+    <header class="navbarmain">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo"><a href="index.html">COPVERDE</a></div>
+            <ul class="links">
+                <li><a href="index.html">Notícias</a></li>
+                <li><a href="DicasEGuias.html">Dicas</a></li>
+                <li><a href="#Redes">Rede Sociais</a></li>
+                <li id="quandologar" class="quando_logar" style="display:none;"><a href="Gerenciamento.html">Minha Compostagem</a></li>
+            </ul>
+            <a href="llogin.html" class="action_bnt" id="auto">Conecte-se</a>
+            <button onclick="openModal()" class="edit">
+                <img src="assets/images/Fotos_pra_otimização/perfilforum.png" 
+                     alt="Foto de Perfil" 
+                     id="profilePicture" 
+                     class="profile-picture">
+              </button>
+           <button id="tema_site" class="tema_site"><i class="ri-moon-line"></i></button>
+            <div class="toggle_bnt">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="index.html">Notícias</a></li>
+            <li><a href="DicasEGuias.html">Dicas</a></li>
+            <li><a href="#Redes">Rede Sociais</a></li>
+            <li id="quandologardrop"  style="display:none;text-align:center;"><a href="Gerenciamento.html" id="quandologardrop">Minha Compostagem</a></li>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="headera">
+            <h1 class="gh1">Gerenciamento de Compostagem</h1>
+        </div>
+
+        <main>
+            <section class="compostagem">
+                <h2 class="gh2">Informações</h2>
+                <p>Gráficos Umidade/Temperatura</p>
+                <div class="compostagem-actions">
+                    <div class="Graph" id='umida'></div>  
+                    <div class="Graph" id='temp'></div> 
+                    <div id="mensagens"></div>
+                </div>
+            </section>
+            
+            <section id="compostagemSection">
+                <h2>Escolha um tipo de compostagem</h2>
+                <select id="tipoCompostagem">
+                    <option value="">Selecione uma opção</option>
+                    <option value="domestica">Compostagem Doméstica</option>
+                    <option value="industrial">Compostagem Industrial</option>
+                    <option value="vermicompostagem">Vermicompostagem</option>
+                </select>
+                <div id="informacoesCompostagem" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; display: none;">
+                </div>
+            </section>
+
+            <section class="a">
+            <h3 class="material">Adicionar Material à Compostagem</h3>
+            <form id="formMaterial">
+                <input type="text" id="material" placeholder="Ex: Restos de comida" required>
+                <button type="submit">Adicionar Material</button>
+                <button id="resetButton">Apagar Todos</button>
+            </form>
+
+            <ul id="listaMateriais"></ul>
+        </section>
+
+    </div>
+        </footer> 
+        <footer>
+            <!-- Rodapé -->
+            <div class="footer-container">
+                <div class="logo">
+                    <img src="assets/images/Fotos_pra_otimização/Logo.webp" alt="Logo CopVerde"> <!-- logo Rodapé -->
+                </div>
+                
+                <div id="Redes" class="footer-content">
+                    <h2>COPVERDE</h2>
+                    <h6>Vida sustentável</h6>
+                    <h6>SIGA NOSSAS REDE SOCIAIS:</h6>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/copve_rde/" target="_blank"><i class="fa-brands fa-instagram fa-xs"></i>Instagram</a> |
+                        <a href="#" target="_blank"><i class="fa-solid fa-envelope fa-xs"></i>E-mail</a> |
+                        <a href="https://www.youtube.com/@COPVERDE-Projeto" target="_blank"><i class="fa-brands fa-youtube fa-xs"></i></i>YouTube</a>
+                    </div>
+                </div>
+                <h7 class="copyright">Integrantes: Alan Lopes, Bruno Coelho, Fylipe Costa, Lucas Souza</h7>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <h7>Copyright (c) 2024 CopVerde All Rights Reserved</h7>
+            </div>
+
+    <!-- Modal para editar perfil -->
+    <div id="editProfileModal" class="modal">
+        <div id="modal-content" class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Editar Perfil</h2>
+          <form id="editProfileForm" class="Form">
+            <input type="file" id="uploadProfilePic" accept="image/*" onchange="previewImage(event)">
+            <button class="cffoto" id="confirmButton"> Confirme a alteração da foto</button>
+            <p id="email_user"></p>
+            <div class="form-row">
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="form-row">
+              <label for="phone">Número:</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-row">
+              <label for="text">Local:</label>
+              <input type="text" id="local" name="local">
+            </div>
+            <div class="form-rowb">
+                <!-- <button>Editar</button> -->
+              <button id="formPerfil">Salvar</button>
+              <button id="logoutBtn">Deslogar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <!--Script js-->
+    <script src="JavasScripts/Firebase init.js"></script>
+    <script src="JavasScripts/hambuguermenu.js"></script>
+    <script src="JavasScripts/profile.js"></script>
+    <script src="JavasScripts/manejo.js"></script>
+    <script src="JavasScripts/Clima.js" type="module"></script>
+    <script src="JavasScripts/Graficos.js" type="module"></script>
+    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+    <script src="JavasScripts/dark.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- Api de tradução-->
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","fr","de","it","es","en"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</body>
+</html>
